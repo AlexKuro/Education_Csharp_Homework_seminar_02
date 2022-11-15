@@ -38,20 +38,15 @@ void Task_13 ()
     Console.Write("Введите число:-> ");
     int number = Convert.ToInt32(Console.ReadLine());
     int container = Math.Abs(number);
-    int number_hundreds = 0;   
     int residuals = 0;
 
-    if (container > 100)
+    if (container > 99)
     {
-        while (container > 100)
+        while (container > 999)
         {
-            if (container > 100 & container < 1000)
-            {
-                number_hundreds = container;
-            }
             container /= 10;
         }
-        residuals = number_hundreds % 10;
+        residuals = container % 10;
         Console.WriteLine($"Третья цифра числа {number} -> {residuals} ");              
     }
     else
@@ -104,7 +99,7 @@ string Week(int day)
     return weekday;
 }
 
-Task_10 ();
+//Task_10 ();
 
 //Task_13 ();
 
